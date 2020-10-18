@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"rel="stylesheet"id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!------Include the above in your HEAD tag ---------->
+	<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container" style="width:1200px; align-content: center;">
+		<h1 style="align-content:center;">Welcome to Toped Store</h1>
+		<table class="table table-hover table-responsive-md">
+			<thead>
+				<tr>
+					<th>Store Name</th>
+					<th>Location</th>
+					<th>Points</th>
+					<th>Reputation</th>
+					<th>Latest Online</th>
+					<th>Item Name</th>
+					<th>Stock</th>
+					<th>Price</th>
+					<th>Rating</th>
+					<th>Sold</th>
+					<th>Seen</th>
+																	
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="store : ${store}">
+					<td th:text="${store.store_name}"></td>
+					<td th:text="${store.location}"></td>
+					<td th:text="${store.points}"></td>
+					<td th:text="${store.reputation}"></td>
+					<td th:text="${store.latest_online}"></td>
+					<td th:text="${store.items.item_name}"></td>
+					<td th:text="${store.items.stock}"></td>
+					<td th:text="${store.items.price}"></td>
+					<td th:text="${store.items.rating}"></td>
+					<td th:text="${store.items.sold}"></td>
+					<td th:text="${store.items.seen}"></td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

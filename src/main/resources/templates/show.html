@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en" xmlns:th="http://www.thymeleaf.org">
+	<meta charset="utf-8"/>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+		
+</head>
+<body>
+	<div class="container" style="width:420px; align-content: center;">
+		<form th:action="@{/buy}" method="get">
+		
+		<h2>Beli disini</h2>
+		<input type="hidden" th:name="id" th:value="*{id}"/>
+			<div class="form-group">
+				<label for="username">Total Item :</label>
+					<input type="number" name="stock" th:name="stock" required class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="username">Rating :</label>
+				<span>Rating (1-5)</span>
+					<input type="number" name="rating" th:name="rating" required class="form-control">
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary" value="Update" style="width:390px; height:40px; align:center;">Buy</button>
+			</div>
+		</form>
+		<a th:href="@{/}" class="btn btn-warning">Kembali</a>
+	</div>
+</body>
+</html>
